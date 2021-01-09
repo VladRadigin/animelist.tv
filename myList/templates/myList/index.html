@@ -9,9 +9,9 @@
 <body>
   <h1>Аниме</h1>
   <div>
-    <a href="/mylist/">Главная</a>
+    <a href="{% url 'index' %}">Главная</a>
     {% for rubric in rubrics %}
-      <a href="/mylist/{{ rubric.pk }}">{{ rubric.name }}</a>
+      <a href="{% url 'by_rubric' rubric.pk %}">{{ rubric.name }}</a>
     {% endfor %}
   </div>
   <hr />
