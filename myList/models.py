@@ -1,7 +1,12 @@
 from django.db import models
 
 class Bb(models.Model):
-    title = models.CharField(max_length=50)
-    content = models.TextField(null=True, blank=True)
-    views = models.FloatField(null=True, blank=True)
-    published = models.DateTimeField(auto_now_add=True, db_index=True)
+    title = models.CharField(max_length=50, verbose_name='Аниме')
+    content = models.TextField(null=True, blank=True, verbose_name='Описание')
+    views = models.FloatField(null=True, blank=True, verbose_name='Просмотры')
+    published = models.DateTimeField(auto_now_add=True, db_index=True, verbose_name='Опубликовано')
+
+    class Meta:
+        verbose_name_plural = 'Список аниме'
+        verbose_name = 'Аниме'
+        ordering = ['-published']

@@ -5,5 +5,5 @@ from django.template import loader
 from django.shortcuts import render
 
 def index(request):
-    bbs = Bb.objects.order_by('-published')
+    bbs = Bb.objects.all()
     return render(request, 'myList/index.html', {'bbs': bbs})
