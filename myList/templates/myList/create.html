@@ -1,23 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Добавление тайтла</title>
-</head>
-<body>
+{% extends 'layout/basic.html' %}
+
+{% block title %}Добавление тайтла{% endblock %}
+
+{% block content %}
   <h1>Добавление аниме</h1>
-  <div>
-    <a href="{% url 'index' %}">Главная</a>
-    {% for rubric in rubrics %}
-      <a href="{% url 'by_rubric' rubric.pk %}">{{ rubric.name }}</a>
-    {% endfor %}
-  </div>
   <form action="" method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Добавить" />
   </form>
-</body>
-</html>
+{% endblock %}
