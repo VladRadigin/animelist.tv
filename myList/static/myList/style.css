@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header h1 {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 40pt;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: url('https://c.wallhere.com/photos/79/76/neon_glow_abstract_3D_illustration-1431843.jpg!d'), left / auto 100% no-repeat;
+}
+
+nav {
+  font-size: 16pt;
+  width: 150px;
+  float: left;
+}
+
+nav a {
+  display: block;
+  margin: 10px 0px;
+}
+
+section {
+  margin-left: 170px;
+}
